@@ -1,0 +1,42 @@
+.container::-webkit-scrollbar {
+    background-color:#fff;
+    width:13px
+}
+
+.container::-webkit-scrollbar-track {
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0,3);
+  border-radius: 1px;
+  background-color: green;
+}
+
+.container::-webkit-scrollbar-thumb {
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0,5);
+    border-radius: 10px;
+    background-color: green;
+}
+
+.container {
+    height: 200px;
+    width: 300px;
+    min-width: 150px;
+    background: #fff;
+    margin: auto auto auto auto;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.overflow{
+    min-width: 350px;
+    min-height:250px;
+}
+html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+body{
+    display: flex;
+    margin: auto auto auto auto;
+    font-size:22px;
+    font-weight:600;
+    font-family: comic sans ms;
+}
