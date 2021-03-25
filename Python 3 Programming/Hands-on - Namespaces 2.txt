@@ -1,5 +1,4 @@
-def Prompt()
-    x = input(Enter a STRINGn)
-    
+def Prompt():
+    x = input("Enter a STRING:\n")
     print(x)
     print(type(x))
