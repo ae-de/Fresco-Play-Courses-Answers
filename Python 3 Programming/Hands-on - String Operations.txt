@@ -1,0 +1,7 @@
+
+def stringoperation(fn, ln, para, number):
+    # Write your code here
+    print(fn+'\n'*number+ln)
+    print(fn+'\t'+ln)
+    print(fn*number)
+    print("The sentence is "+para)

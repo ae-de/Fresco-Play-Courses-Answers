@@ -1,0 +1,13 @@
+def tuplefunction(list1, list2, string1, n):
+    # Write your code here
+    tuple1=tuple(list1)
+    tuple2=tuple(list2)
+    t = tuple(tuple1 + tuple2)
+    print (t)
+    print (t[4])
+    t2 = (tuple1, tuple2)
+    print(t2)
+    print(len(t2))
+    print (tuple((string1,))*n)
+    print(max(tuple1))
+    

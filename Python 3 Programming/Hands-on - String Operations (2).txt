@@ -1,0 +1,9 @@
+def resume(first, second, parent, city, phone, start, strfind, string1):
+    # Write your code here
+    z=(first.strip().capitalize() +' '+ second.strip().capitalize() +' '+ parent.strip().capitalize() +' '+ city.strip())
+    print(z)
+    print(phone.isdecimal())
+    print(phone.startswith(start))
+    print(z.count(strfind))
+    print(string1.split())
+    print(city.find(strfind))

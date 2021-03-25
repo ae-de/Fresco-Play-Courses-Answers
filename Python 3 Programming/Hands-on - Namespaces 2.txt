@@ -1,0 +1,5 @@
+def Prompt()
+    x = input(Enter a STRINGn)
+    
+    print(x)
+    print(type(x))

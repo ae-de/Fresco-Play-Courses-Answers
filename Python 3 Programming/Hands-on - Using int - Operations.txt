@@ -1,0 +1,19 @@
+def find(num1, num2, num3):
+    # Write your code here
+    if num1<num2 and num2>=num3:
+        a=True
+    else: 
+        a=False
+    
+    if num1>num2 and num2 <=num3:
+        b=True
+    else: 
+        b=False
+    
+
+    if num3==num1 and num1!=num2:
+        c=True
+    else: 
+        c=False
+    
+    print(a,b,c)

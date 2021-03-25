@@ -1,0 +1,8 @@
+def generateList(startvalue, endvalue):
+    # Write your code here
+    a = list(range(startvalue,endvalue+1))
+    print (a[0:3])
+    print (a[-1:-6:-1])
+    print (a[::4])
+    print (list(range(endvalue,startvalue-1,-2)))
+    

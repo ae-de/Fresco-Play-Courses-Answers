@@ -1,0 +1,21 @@
+def calculateGrade(students_marks):
+    # Write your code here
+    Gra=[]
+    for grade_list in students_marks:
+        total=sum(grade_list)
+        av=float(total/(len(grade_list)))
+        if av >=90:
+            Grades='A+'
+        elif av >=80 and av <90:
+            Grades='A'
+        elif av >=70 and av <80:
+            Grades='B'
+        elif av >=60 and av <70:
+            Grades='C'
+        elif av >=50 and av <60:
+            Grades='D'
+        elif av <50:
+            Grades='F'
+        Gra.append(Grades)
+    return(Gra)
+        

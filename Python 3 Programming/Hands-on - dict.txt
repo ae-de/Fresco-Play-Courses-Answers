@@ -1,0 +1,10 @@
+def myDict(key1, value1, key2, value2, value3, key3):
+    # Write your code here
+    a = {key1:value1}
+    print (a)
+    a[key2]=value2
+    print (a)
+    a[key1]=value3
+    print(a)
+    del a[key3]
+    return a

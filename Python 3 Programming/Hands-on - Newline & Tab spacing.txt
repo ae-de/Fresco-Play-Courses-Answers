@@ -1,0 +1,8 @@
+def Escape(s1, s2, s3):
+    # Write your code here
+    s = "Python\tRaw\nString\tConcept"
+    print(s1+'\n'+s2+'\n'+s3)
+    print(s1+'\t'+s2+'\t'+s3)
+    print(s)
+    raw_s = r"Python\tRaw\nString\tConcept"
+    print(raw_s)

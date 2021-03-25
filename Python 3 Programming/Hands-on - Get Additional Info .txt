@@ -1,0 +1,5 @@
+# GET ADDITIONAL INFO
+ 
+def docstring(functionname):
+	# Write your code here
+	help(functionname)

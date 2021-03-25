@@ -1,0 +1,11 @@
+def setOperation(seta, setb):
+    # Write your code here
+    sa = set(seta)
+    sb = set(setb)
+    s1 = list((sa.union(sb)))
+    s2 = list((sa.intersection(sb)))
+    s3 = list((sa.difference(sb)))
+    s4 = list((sb.difference(sa)))
+    s5 = list((sa.symmetric_difference(sb)))
+    x = frozenset(seta)
+    return (s1, s2, s3, s4, s5, x)

@@ -1,0 +1,4 @@
+def rangefunction(startvalue, endvalue, stepvalue):
+    # Write your code here
+    for i in range(startvalue,endvalue,stepvalue):
+        print(i*i,end=" ")

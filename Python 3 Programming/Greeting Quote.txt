@@ -1,0 +1,24 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'Greet' function below.
+#
+# The function accepts STRING Name as parameter.
+#
+
+def Greet(Name):
+    print("Welcome "+Name+".\nIt is our pleasure inviting you.\nHave a wonderful day.")
+    # Write your code here
+
+if __name__ == '__main__':
+    Name = input()
+
+    Greet(Name)

@@ -1,0 +1,5 @@
+from math import pi
+def triangle(n1, n2, n3):
+    # Write your code here
+    area = float(n1*n2/2)
+    return (round(area,n3), round(pi,n3))
