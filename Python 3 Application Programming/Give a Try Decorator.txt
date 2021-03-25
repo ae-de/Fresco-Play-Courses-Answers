@@ -21,6 +21,22 @@ greet = log(greet)
 
 if __name__ == "__main__":
 ##################################
+def log(func):
+    def inner(*args, **kwdargs):
+        str_template = "Accessed the function -'{}' with arguments {} {}".format(func.__name__,
+                                                                                args,
+                                                                                kwdargs)
+        return str_template + "\n" + str(func(*args, **kwdargs))
+    return inner
+
+#Add greet function definition here
+
+##
+###Add greet function definition here
+@log
+def average(n1,n2,n3):
+    return (n1 + n2 + n3)/3
+##################################
 
 def bold_tag(func):
     def inner(x):
