@@ -5,7 +5,7 @@ class Movie:
         self.cost = cost
 
     def __str__(self):
-        return "Movie:%s\nNumber of Tickets:%s\nTotal Cost:%s" % (self.name, self.n, self.cost)
+        return "Movie : %s\nNumber of Tickets : %s\nTotal Cost : %s" % (self.name, self.n, self.cost)
 
 if __name__ == '__main__':
     name = input()
