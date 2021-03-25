@@ -27,8 +27,3 @@
   * [Bootstrap Framework](#Prodigious-Git)
   * [Convolutional Neural Networks (CNN)](#Prodigious-Git)
 
-## Donate
-
-If this Repo helped you rising your T-Factor, you can give me a cup of coffee :) 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](http://paypal.me/akhilsree001)
