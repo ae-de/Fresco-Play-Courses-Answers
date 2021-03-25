@@ -1,0 +1,9 @@
+    1  cd test
+    2  git init
+create hello world.js
+    4  git log
+    5  git add .
+    6  git commit -m "msg"
+create .gitignore
+    7  git add .
+    8  git commit -m "msg"
