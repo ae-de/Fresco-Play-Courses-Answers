@@ -24,6 +24,7 @@
   * [Django - Web Framework](#Python-Qualis)
   * [Python 3 Programming](#Prodigious-Git)
   * [Styling with CSS3](#Prodigious-Git)
+  * [Bootstrap Framework](#Prodigious-Git)
 
 ## Donate
 

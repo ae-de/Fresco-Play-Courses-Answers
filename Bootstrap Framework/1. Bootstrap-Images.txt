@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grab it!!!!</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/mystyle.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg" alt="Chania">
+<img class="img-circle" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg" alt="Chania">
+<img class="img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg" alt="Chania">
+
+</body>
+</html>
+
