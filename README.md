@@ -19,7 +19,11 @@
   * [Python 3 Application Programming](#Application-Programming)
   * [Python Qualis](#Python-Qualis)
   * [Prodigious Git](#Prodigious-Git)
-  
+  * [#Mini-Project - Core Java](#Functions-and-OOPs)
+  * [#Miniproject - Java Complete Beginner](#Application-Programming)
+  * [Django - Web Framework](#Python-Qualis)
+  * [Python 3 Programming](#Prodigious-Git)
+  * [Styling with CSS3](#Prodigious-Git)
 
 ## Donate
 
