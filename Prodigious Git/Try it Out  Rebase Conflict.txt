@@ -1,0 +1,16 @@
+    4  git clone .assessment/remote
+    5  cd remote
+    6  ls
+	#####edit check_number.py####
+    7  git add .
+    8  git commit -m "m"
+    9  cd ..
+   14  bash .fetch_sh
+   15  cd remote
+   17  git diff master origin/master 
+   20  git fetch origin
+   21  git rebase origin/master
+###resolve conflict####
+   27  git add .
+   28  git rebase --continue
+   29  git push origin master

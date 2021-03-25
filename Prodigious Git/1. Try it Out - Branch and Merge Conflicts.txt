@@ -1,0 +1,26 @@
+cd test
+git branch feature1
+git branch feature2
+
+git checkout feature1
+  ### ( add print('hello people'))####
+git add .
+git commit -m "m"
+
+git checkout master
+git merge feature1
+git checkout feature2
+  ### ( add print('keep playing'))####
+git add .
+git commit -m "m"
+cd ..
+cd quotes
+
+    ###add  (My life is my messge.   Mahatma Gandhi)####
+git add .
+git commit -m "m"
+git pull origin master --allow-unrelated-histories
+git checkout --theirs Quotes.txt
+git add .
+git commit -m "m"
+git push origin master

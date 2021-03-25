@@ -1,0 +1,16 @@
+    1  cd test
+    2  ls
+    3  git init
+    4  git remote add origin ../.assessment/remote
+    5  ls ../.assessment/remote
+    6  git add .
+    7  git commit -m "m"
+    8  git push remote origin
+   10  git push origin master
+   11  cd ..
+   12  bash .clone_sh
+   13  cd test
+   15  git pull origin master
+   16  cd ..
+   17  cd clone
+   18  git clone https://github.com/frescoplaylab/hello-world

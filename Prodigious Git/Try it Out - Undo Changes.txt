@@ -1,0 +1,31 @@
+    1  test
+    2  cd test
+    3  nano hello.py
+    4  git log --oneline
+    5  ###########add t to print in hello.py###########
+    6  git add .
+    7  git commit --amend -m "an updated commit message" 
+    ###########add bug to file in hello.py###########
+    7  git diff HEAD
+    8  git checkout hello.py
+     ###########add bug to file in hello.py###########
+    9  git status
+   11  git add .
+   12  git diff --cached
+   13  git reset
+   14  git status
+   15  git reset --hard HEAD
+    ###########add bug to file to print in hello.py###########
+   16  git add .
+   17  git commit -m "m"
+
+   18  git log --oneline
+   19  git show HEAD
+   20  git revert HEAD
+   21  git show HEAD
+
+   54  git revert HEAD...HEAD~3 --no-edit
+   55  cat hello.py
+   56  git log --oneline
+   57  git push origin HEAD  
+   
