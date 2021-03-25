@@ -1,0 +1,62 @@
+#!/bin/python3
+
+import sys
+import os
+
+
+
+#Write detecter implementation
+def detector(element):
+    
+    #Write isIn implementation    
+    def isIn(lst):
+        if element in lst:
+            return True
+        else:
+            return False
+    
+    return isIn
+
+#Write closure function implementation for detect30 and detect45
+def detect30(lst):
+    fun = detector(30)
+    return fun(lst)
+
+def detect45(lst):
+    fun = detector(45)
+    return fun(lst)
+
+if __name__ == "__main__":
+    with open(os.environ['OUTPUT_PATH'], 'w') as fout:
+        func_lst = [detect30, detect45]
+        res_lst = list()
+        lst = list(map(lambda x: int(x.strip()), input().split(',')))
+        for func in func_lst:
+            res_lst.append(func(lst))
+        fout.write("{}\n{}".format(*res_lst))
+
+#########################################
+
+#!/bin/python3
+
+import sys
+import os
+
+
+
+# Add the factory function implementation here
+def factory(n=0):
+    def counter():
+        nonlocal n
+        n = n+1
+        return n
+    
+    def current():
+        return n
+    
+        
+    return current,counter;
+
+f_current, f_counter = factory(int(input()))
+
+if __name__ == "__main__":

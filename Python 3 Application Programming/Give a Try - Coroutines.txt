@@ -1,0 +1,84 @@
+# Define the coroutine function 'linear_equation' below.
+
+def linear_equation(a, b):
+    while True:
+        x = (yield)
+        y = a*(x**2)+b
+        print('Expression, '+str(a)+'*x^2 + '+str(b)+', with x being '+str(x)+' equals '+str(y))
+
+if __name__ == "__main__":
+    a = 3
+
+    b = 4
+
+    equation1 = linear_equation(a, b)
+    
+    next(equation1)
+    
+    equation1.send(6)
+    
+    
+
+#################################
+import sys
+import os
+
+# Define 'coroutine_decorator' below
+def coroutine_decorator(func):
+    def wrapper(*args, **kwdargs):
+        c = func(*args, **kwdargs)
+        next(c)
+        return c
+    return wrapper
+    
+# Define coroutine 'linear_equation' as specified in previous exercise
+@coroutine_decorator
+def linear_equation(a, b):
+    while True:
+        x = (yield)
+        y = a*(x**2)+b
+        print('Expression, '+str(a)+'*x^2 + '+str(b)+', with x being '+str(x)+' equals '+str(y))
+
+    
+
+if __name__ == "__main__":
+
+#####################################
+#!/bin/python3
+
+import sys
+
+
+# Define the function 'coroutine_decorator' below
+def coroutine_decorator(func):
+    def wrapper(*args, **kwdargs):
+        c = func(*args, **kwdargs)
+        next(c)
+        return c
+    return wrapper
+    
+# Define the coroutine function 'linear_equation' below
+@coroutine_decorator
+def linear_equation(a, b):
+    while True:
+        x = (yield)
+        y = a*(x**2)+b
+        print('Expression, '+str(a)+'*x^2 + '+str(b)+', with x being '+str(x)+' equals '+str(y))
+
+    
+# Define the coroutine function 'numberParser' below
+@coroutine_decorator
+def numberParser():
+    equation1 = linear_equation(3, 4)
+    equation2 = linear_equation(2, -1)
+    # code to send the input number to both the linear equations
+    while True:
+        x = (yield)
+        equation1.send(x)
+        equation2.send(x)
+    
+def main(x):
+    n = numberParser()
+    n.send(x)
+    
+if __name__ == "__main__":

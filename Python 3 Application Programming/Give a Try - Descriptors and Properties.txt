@@ -1,0 +1,37 @@
+#!/bin/python3
+
+import sys
+import os
+
+
+
+class Fahrenheit( object ):
+    def __init__( self, value=0 ):
+        self.value= value
+    def __get__( self, instance, owner ):
+        return self.value
+    def __set__( self, instance, value ):
+        self.value= value
+        
+class Celsius( object ):
+    def __get__( self, instance, owner ):
+        return (instance.fahrenheit- 32)*5/9
+    def __set__( self, instance, value ):
+        instance.fahrenheit= (float(value)* 9/ 5)+32
+
+class Temperature( object ):
+    def __init__( self, value):
+        self.fahrenheit = value
+    celsius= Celsius()
+    fahrenheit= Fahrenheit()
+        
+'''Check the Tail section for input/output'''
+
+if __name__ == "__main__":
+    with open(os.environ['OUTPUT_PATH'], 'w') as fout:
+        res_lst = list()
+        t1 = Temperature(int(input()))
+        res_lst.append((t1.fahrenheit, t1.celsius))
+        t1.celsius = int(input())
+        res_lst.append((t1.fahrenheit, t1.celsius))
+        fout.write("{}\n{}".format(*res_lst))

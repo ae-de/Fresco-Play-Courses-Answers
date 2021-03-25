@@ -1,0 +1,121 @@
+#!/bin/python3
+
+import sys
+import os
+import datetime as dt
+
+
+#Add log function and inner function implementation here
+def log(func):
+    def inner(x):
+        return 'Accessed the function -\''+'greet'+'\' with arguments (\''+x+'\',) {}'
+        func(x)
+    return inner
+
+def greet(msg):
+    return 'Greeting Message : ' + msg
+
+greet = log(greet)
+
+'''Check the Tail section for input/output'''
+
+if __name__ == "__main__":
+##################################
+
+def bold_tag(func):
+    def inner(x):
+        return '<b>'+str(func(x))+'</b>'
+
+    return inner
+
+def say(msg):
+    return msg
+
+say = bold_tag(say)
+
+########################
+import os
+import sys
+
+
+def bold_tag(func):
+    
+    def inner(*args, **kwdargs):
+        return '<b>'+func(*args, **kwdargs)+'</b>'
+        
+    return inner
+
+#Implement italic_tag below
+def italic_tag(func):
+    
+    def inner(*args, **kwdargs):
+        return '<i>'+str(func(*args, **kwdargs))+'</i>'
+        
+    return inner
+
+
+def say(msg):
+    return msg
+
+say = italic_tag(say)
+'''Check the Tail section for input/output'''
+
+if __name__ == "__main__":
+
+#########################
+import os
+import sys
+
+def bold_tag(func):
+    
+    def inner(*args, **kwdargs):
+        return '<b>'+func(*args, **kwdargs)+'</b>'
+        
+    return inner
+
+def italic_tag(func):
+    
+    def inner(*args, **kwdargs):
+        return '<i>'+func(*args, **kwdargs)+'</i>'
+        
+    return inner
+    
+#Add greet() function definition
+def greet():
+    return '<i>'+input()+'</i>'
+    
+'''Check the Tail section for input/output'''
+
+if __name__ == "__main__":
+    with open(os.environ['OUTPUT_PATH'], 'w') as fout:
+        res_lst = list()
+        res_lst.append(greet())
+        fout.write("{}".format(*res_lst))
+
+##############################
+import os
+import sys
+
+
+def bold_tag(func):
+    
+    def inner(*args, **kwdargs):
+        return '<b>'+func(*args, **kwdargs)+'</b>'
+        
+    return inner
+
+def italic_tag(func):
+    
+    def inner(*args, **kwdargs):
+        return '<i>'+func(*args, **kwdargs)+'</i>'
+        
+    return inner
+    
+#Add greet() implementation here
+@italic_tag
+@bold_tag
+def greet():
+    return input()
+'''check Tail section below for input / output'''
+
+if __name__ == "__main__":

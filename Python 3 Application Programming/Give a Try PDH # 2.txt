@@ -1,0 +1,63 @@
+#!/bin/python3
+
+import sys
+import os
+import io
+import re
+
+
+# Complete the function below.
+def subst(pattern, replace_str, string):
+    #susbstitute pattern and return it
+    return re.sub(pattern,replace_str,string)
+
+
+def main():
+    addr = ['100 NORTH MAIN ROAD',
+            '100 BROAD ROAD APT.',
+            'SAROJINI DEVI ROAD',
+            'BROAD AVENUE ROAD']
+            
+    #Create pattern Implementation here 
+    print(subst('[ ]*Road[ ]*','RD','BRoad'))
+    new_address = [subst('ROAD','RD.',a) for a in addr]
+    #Use subst function to replace 'ROAD' to 'RD.',Store as new_address
+
+    return new_address
+
+'''For testing the code, no input is required'''
+
+#!/bin/python3
+
+import sys
+import os
+import io
+import re
+
+
+# Complete the function below.
+# Complete the function below.
+def subst(pattern, replace_str, string):
+    #susbstitute pattern and return it
+    return re.sub(pattern,replace_str,string)
+
+
+def main():
+    addr = ['100 NORTH MAIN ROAD',
+            '100 BROAD ROAD APT.',
+            'SAROJINI DEVI ROAD',
+            'BROAD AVENUE ROAD']
+            
+    #Create pattern Implementation here 
+    print(subst(r"\s+Road\s+",' RD. ','BRoad'))
+    new_address = [subst(r'\s+ROAD\s+',' RD. ',a) for a in addr]
+    new_address = [subst(r'\s+ROAD$',' RD.',a) for a in new_address]
+    new_address = [subst(r'^ROAD\s+','RD. ',a) for a in new_address]
+    #Use subst function to replace 'ROAD' to 'RD.',Store as new_address
+
+    return new_address
+
+
+'''For testing the code, no input is required'''
+
+if __name__ == "__main__":if __name__ == "__main__":

@@ -1,0 +1,109 @@
+#!/bin/python3
+
+import sys
+import os
+import inspect
+
+
+
+# Complete the function below.
+
+def writeTo(filename, input_text):
+    with open(filename,'w') as fout:
+        fout.write(input_text)
+
+
+if __name__ == "__main__":
+    try:
+        filename = str(input())
+    except:
+        filename = None
+
+    try:
+        input_text = str(input())
+    except:
+        input_text = None
+
+    res = writeTo(filename, input_text)
+    
+    if 'with' in inspect.getsource(writeTo):
+        print("'with' used in 'writeTo' function definition.")
+        
+    if os.path.exists(filename):
+        print('File :',filename, 'is present on system.')
+        with open(filename) as fp:
+            content = fp.read()
+        if content == input_text:
+            print('File Contents are :', content)
+    
+
+############################
+import zipfile
+import sys
+import os
+import inspect
+
+# Define 'writeTo' function below, such that 
+# it writes input_text string to filename.
+def writeTo(filename, input_text):
+    with open(filename,'w') as fout:
+        fout.write(input_text)
+    
+# Define the function 'archive' below, such that
+# it archives 'filename' into the 'zipfile'
+def archive(zfile, filename):
+    with zipfile.ZipFile(zfile,'w') as zip:
+        zip.write(filename)
+    
+
+if __name__ == "__main__":
+
+######################
+
+#!/bin/python3
+
+import sys
+import os
+import subprocess
+import inspect
+
+
+
+# Complete the function below.
+
+def run_process(cmd_args):
+    with subprocess.Popen('echo Hello', stdout=subprocess.PIPE, shell=True) as proc: 
+        op = proc.stdout.read()  # returns the output
+        return op
+    
+if __name__ == "__main__":
+    f = open(os.environ['OUTPUT_PATH'], 'w')
+
+    cmd_args_cnt = 0
+    cmd_args_cnt = int(input())
+    cmd_args_i = 0
+    cmd_args = []
+    while cmd_args_i < cmd_args_cnt:
+        try:
+            cmd_args_item = str(input())
+        except:
+            cmd_args_item = None
+        cmd_args.append(cmd_args_item)
+        cmd_args_i += 1
+
+
+    res = run_process(cmd_args);
+    #f.write(res.decode("utf-8") + "\n")
+    
+   
+    
+    if 'with' in inspect.getsource(run_process):
+        f.write("'with' used in 'run_process' function definition.\n")
+    
+    if 'Popen' in inspect.getsource(run_process):
+        f.write("'Popen' used in 'run_process' function definition.\n")
+        f.write('Process Output : %s\n' % (res.decode("utf-8")))
+
+    f.close()
+
+    

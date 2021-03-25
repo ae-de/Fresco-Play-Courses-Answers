@@ -1,0 +1,79 @@
+import os
+import sys
+
+#Add Circle class implementation below
+class Circle:
+    no_of_circles = 0
+    def __init__(self,radius):
+        self.radius = radius
+        Circle.no_of_circles = Circle.no_of_circles + 1
+    
+    @classmethod
+    def area(cls):
+        return radius*radius*3.14
+        
+'''Check the Tail section for input/output'''
+
+if __name__ == "__main__":
+    with open(os.environ['OUTPUT_PATH'], 'w') as fout:
+        res_lst = list()
+        lst = list(map(lambda x: float(x.strip()), input().split(',')))
+        for radius in lst:
+            res_lst.append(Circle(radius).area())
+        fout.write("{}\n{}".format(str(res_lst), str(Circle.no_of_circles)))
+####################################
+import os
+import sys
+
+#Add Circle class implementation here
+class Circle:
+    no_of_circles = 0
+    def __init__(self,radius):
+        self.radius = radius
+        Circle.no_of_circles = Circle.no_of_circles + 1
+    
+    def area(cls):
+        return cls.radius*cls.radius*3.14
+    
+    @classmethod
+    def getCircleCount(cls):
+        return Circle.no_of_circles
+        
+'''Check the Tail section for input/output'''
+
+if __name__ == "__main__":
+    with open(os.environ['OUTPUT_PATH'], 'w') as fout:
+        res_lst = list()
+        circcount = list()
+        lst = list(map(lambda x: float(x.strip()), input().split(',')))
+        for radi in lst:
+            c=Circle(radi)
+            res_lst.append(str(c.getCircleCount())+" : "+str(c.area()))
+        fout.write("{}\n{}".format(str(res_lst), str(Circle.getCircleCount())))
+
+#####################################
+import os
+import sys
+
+#Add circle class implementation here
+class Circle:
+    no_of_circles = 0
+    def __init__(self,radius):
+        self.radius = radius
+        Circle.no_of_circles = Circle.no_of_circles + 1
+    
+    @staticmethod
+    def getPi():
+        return 3.14
+    
+    def area(cls):
+        pi = Circle.getPi()
+        return cls.radius*cls.radius*pi
+    
+    @classmethod
+    def getCircleCount(cls):
+        return Circle.no_of_circles
+        
+'''Check the Tail section for input/output'''
+
+if __name__ == "__main__":
