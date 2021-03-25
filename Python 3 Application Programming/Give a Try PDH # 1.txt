@@ -165,15 +165,17 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 '''
 
-fp = io.StringIO(zenPython)
-
-zenlines = fp.readlines()
-
-zenlines = [ line.strip() for line in zenlines ]
-
-g1 = [ re.search(r'\*.*?\*', line) for line in zenlines ]
-g2 = [ re.search(r'\-\-.*?\-\-', line) for line in zenlines ]
-g1= [i.group(0).strip('*').strip() for i in g1 if i!=None]
-g2= [i.group(0).strip('--').strip() for i in g2 if i!=None]
-print(g2+g1)
+    fp = io.StringIO(zenPython)
+    
+    zenlines = fp.readlines()
+    
+    zenlines = [ line.strip() for line in zenlines ]
+    
+    g1 = [ re.search(r'\*.*?\*', line) for line in zenlines ]
+    g2 = [ re.search(r'\-\-.*?\-\-', line) for line in zenlines ]
+    g1= [i.group(0).strip('*').strip() for i in g1 if i!=None]
+    g2= [i.group(0).strip('--').strip() for i in g2 if i!=None]
+ 
+                
+    return g2+g1
 ########################################
