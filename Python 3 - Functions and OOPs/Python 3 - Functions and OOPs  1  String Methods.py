@@ -35,11 +35,11 @@ def stringmethod(para, special1, special2, list1, strfind):
         if s not in para:
             a = False
     if a:
-        print("Every string in ", end=" "),
+        print("Every string in", end=" "),
         print(list1, end=" "),
         print("were present")
     else:
-        print("Every string in ", end=" "),
+        print("Every string in", end=" "),
         print(list1, end=" "),
         print("were not present")
 
